@@ -8,7 +8,7 @@
 
 ## Sobre Rumate
 
-[Rumate](https://github.com/lew5/rumate-utu-2023) es un proyecto personal que surge como una exploración de lo que podría haber sido un proyecto de egreso del curso de Informática con énfasis en Desarrollo Web de la UTU Maldonado - Escuela Técnica Superior de Maldonado. Aunque el proyecto original no alcanzó su objetivo final debido a limitaciones de tiempo, esta versión de Rumate representa un esfuerzo para demostrar el potencial de una solución integral para la gestión de remates rurales.
+Rumate es un proyecto personal que surge como una exploración de lo que podría haber sido un [proyecto de egreso](https://github.com/lew5/rumate-utu-2023) del curso de Informática con énfasis en Desarrollo Web de la UTU Maldonado - Escuela Técnica Superior de Maldonado. Aunque el proyecto original no alcanzó su objetivo final debido a limitaciones de tiempo, esta versión de Rumate representa un esfuerzo para demostrar el potencial de una solución integral para la gestión de remates rurales.
 
 ## Características Principales
 
