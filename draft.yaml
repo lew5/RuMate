@@ -1,0 +1,11 @@
+models:
+    User:
+        id: id
+        name: string unique
+        relationships:
+          belongsToMany: Role
+    Role:
+        id: id
+        name: string unique
+        relationships:
+          belongsToMany: User
