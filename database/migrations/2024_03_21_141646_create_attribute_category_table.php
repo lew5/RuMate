@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('attribute_category', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('attribute_id');
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
+            $table->unique(['attribute_id', 'category_id']);
             $table->timestamps();
         });
     }
