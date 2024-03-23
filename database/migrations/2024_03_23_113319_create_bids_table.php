@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('bids', function (Blueprint $table) {
             $table->id();
+            $table->decimal('amount');
+            $table->unsignedBigInteger('lot_id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('lot_id')->references('id')->on('lots');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
