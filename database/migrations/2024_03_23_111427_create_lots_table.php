@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('lots', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->decimal('starting_price');
+            $table->enum('status', ['Open', 'Closed', 'Sold', 'Paused', 'Pending', 'Reserved', 'Cancelled'])->default('Open');
+            $table->unsignedBigInteger('winner_user_id');
+            $table->foreign('winner_customer_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
