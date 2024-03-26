@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('address');
             $table->string('phone')->unique();
+            $table->unsignedBigInteger('user_id')->references('id')->on('users');
             $table->unique(['user_id', 'phone']);
             $table->timestamps();
         });
