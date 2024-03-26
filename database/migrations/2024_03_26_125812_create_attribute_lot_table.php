@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('attribute_lot', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('attribute_id');
+            $table->unsignedBigInteger('lot_id');
+            $table->foreign('attribute_id')->references('id')->on('attributes');
+            $table->foreign('lot_id')->references('id')->on('lots');
+            $table->unique(['attribute_id', 'lot_id']);
             $table->timestamps();
         });
     }
