@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('lot_product', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('lot_id');
+            $table->unsignedBigInteger('product_id');
+            $table->foreign('lot_id')->references('id')->on('lots');
+            $table->foreign('product_id')->references('id')->on('products');
+            $table->unique(['lot_id', 'product_id']);
             $table->timestamps();
         });
     }
