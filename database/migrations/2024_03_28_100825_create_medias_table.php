@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('medias', function (Blueprint $table) {
             $table->id();
+            $table->morphs('mediable');
+            $table->enum('type', ['video', 'image']);
+            $table->string('path');
             $table->timestamps();
         });
     }
