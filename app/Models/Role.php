@@ -15,10 +15,10 @@ class Role extends Model
         'description'
     ];
 
-    protected $casts = [
-        'name' => 'string',
-        'description' => 'string',
-    ];
+    protected function casts(): array
+    {
+        return ['name' => 'string', 'description' => 'string',];
+    }
 
     public function users(): BelongsToMany
     {
