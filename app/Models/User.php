@@ -50,4 +50,9 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class);
     }
+
+    public function notifications(): BelongsToMany
+    {
+        return $this->belongsToMany(Notification::class);
+    }
 }
