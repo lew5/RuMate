@@ -10,19 +10,11 @@ class Notification extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'type',
-        'title',
-        'message'
-    ];
+    protected $fillable = ['type', 'title', 'message'];
 
     protected function casts(): array
     {
-        return [
-            'type' => 'string',
-            'title' => 'string',
-            'message' => 'string'
-        ];
+        return ['type' => 'string', 'title' => 'string', 'message' => 'string'];
     }
 
     public function users(): BelongsToMany
