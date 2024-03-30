@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Auction extends Model
 {
@@ -19,5 +20,10 @@ class Auction extends Model
             'start_date' => 'datetime',
             'date_date' => 'datetime'
         ];
+    }
+
+    public function lots(): BelongsToMany
+    {
+        return $this->belongsToMany(Lot::class);
     }
 }

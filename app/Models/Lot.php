@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Lot extends Model
 {
@@ -19,5 +20,10 @@ class Lot extends Model
             'status' => 'string',
             'winner_user_id' => 'int',
         ];
+    }
+
+    public function auction(): BelongsToMany
+    {
+        return $this->belongsToMany(Auction::class);
     }
 }
