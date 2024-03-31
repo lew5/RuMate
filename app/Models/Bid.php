@@ -21,4 +21,9 @@ class Bid extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function lot(): BelongsTo
+    {
+        return $this->belongsTo(Lot::class);
+    }
 }
