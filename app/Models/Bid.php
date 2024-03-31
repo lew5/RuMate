@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Bid extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['amount'];
+
+    protected function casts(): array
+    {
+        return ['amount' => 'float'];
+    }
 }
