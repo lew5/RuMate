@@ -21,4 +21,9 @@ class Category extends Model
     {
         return $this->belongsToMany(Attribute::class);
     }
+
+    public function lots(): BelongsToMany
+    {
+        return $this->belongsToMany(Lot::class);
+    }
 }

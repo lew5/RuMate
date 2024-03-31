@@ -26,4 +26,9 @@ class Lot extends Model
     {
         return $this->belongsToMany(Auction::class);
     }
+
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(Category::class);
+    }
 }
