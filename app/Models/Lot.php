@@ -31,4 +31,9 @@ class Lot extends Model
     {
         return $this->belongsToMany(Category::class);
     }
+
+    public function attributes(): BelongsToMany
+    {
+        return $this->belongsToMany(Attribute::class)->withPivot('value');
+    }
 }
