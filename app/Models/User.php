@@ -54,4 +54,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Bid::class);
     }
+
+    public function details()
+    {
+        return $this->hasOne(UserDetail::class);
+    }
 }
