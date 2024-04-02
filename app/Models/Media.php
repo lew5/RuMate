@@ -10,8 +10,6 @@ class Media extends Model
 {
     use HasFactory;
 
-    protected $table = 'medias';
-
     protected $fillable = ['mediable_id', 'mediable_type', 'path', 'type'];
 
     protected function casts(): array
